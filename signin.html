@@ -1,4 +1,12 @@
 <html lang="en"><head>
+    <!--
+    *********************************************************************************************************************************************
+    *                   ATTENDANCE MANAGER VERSIÓ WEB PER L'INS PUIG CASTELLAR                                                                  *
+    *                   AUTORS: ALEX VISIEDO, ORIOL ALBAREDA                                                                                    *
+    *                   DATA I LLOC DE REALITZACIÓ: 2015, BARCELONA                                                                             *
+    *                   BOOTSTRAP + JS (RESTFUL)                                                                                                *
+    *********************************************************************************************************************************************
+    -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,15 +14,23 @@
     <meta name="author" content="Alex Visiedo & Oriol Albareda">
     <link rel="icon" href="img/favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Identificació per l'Attendance Manager</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
+    
+    <!-- Footer styles for this template -->
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
 
+    <script>
+        function alerta() {
+            alert("Aquí debería ir la función rest para consultar el usuario: " + document.forms["login"]["email"].value + " - "+ document.forms["login"]["password"].value);
+        }
+    </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -25,21 +41,33 @@
 <body>
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" name="login">
         <h2 class="form-signin-heading">Identificació</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Identificació" required="" autofocus="">
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Identificació" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Contrasenya" required="">
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Contrasenya" required="">
+        <!--
+        *********************************************************************************************************************************************
+        *ESTO ES EL BOTÓN DE RECORDAR, PERO COMO ES INFORMACIÓN BASTANTE SENSIBLE, CREO QUE DEBERÍA NO ESTAR, ASÍ QUE LO DEJO COMENTADO POR SI ACASO*
+        *********************************************************************************************************************************************
+
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Recorda'm
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Identifica'm</button>
+
+        -->
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="alerta()">Identifica'm</button>
       </form>
 
     </div> <!-- /container -->
-    <br />
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Desarrollado por Alex Visiedo & Oriol Albareda</p>
+      </div>
+    </footer>
 </body>
 </html>
