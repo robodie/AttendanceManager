@@ -26,11 +26,6 @@
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
 
 
-    <script>
-        function alerta() {
-            alert("Aquí debería ir la función rest para consultar el usuario: " + document.forms["login"]["email"].value + " - "+ document.forms["login"]["password"].value);
-        }
-    </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -41,7 +36,7 @@
 <body>
     <div class="container">
 
-      <form class="form-signin" name="login">
+      <form class="form-signin" name="login" method="post">
         <h2 class="form-signin-heading">Identificació</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Identificació" required="" autofocus="">
@@ -59,7 +54,7 @@
         </div>
 
         -->
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="alerta()">Identifica'm</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="setLoginCookie()">Identifica'm</button>
       </form>
 
     </div> <!-- /container -->
@@ -69,5 +64,6 @@
         <p class="text-muted">INS Puig Castellar &copy; 2015</p>
       </div>
     </footer>
+    <script src="js/cookieManager.js"></script>
 </body>
 </html>

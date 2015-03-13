@@ -63,7 +63,7 @@
     <div class="jumbotron">
       <div class="container">
         <div class="list-group">
-            <a href="javascript:showModal()" class="list-group-item"><span class="badge">Hora: 13:00</span>M05-DAM B</a>
+            <a href="javascript:showModal(Document.getElementById(this).name();)" class="list-group-item"><span class="badge">Hora: 13:00</span>M05-DAM B</a>
             <a href="javascript:showModal()" class="list-group-item"><span class="badge">Hora: 15:00</span>M05-DAM A</a>
             <a href="javascript:showModal()" name="C" class="list-group-item"><span class="badge">Hora: 12:00</span>M05-DAM A</a>
           </div>
@@ -88,6 +88,7 @@
     <script>
         function showModal(name) {
           alert("Has clickado en " + name);
+            
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
