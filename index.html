@@ -26,7 +26,6 @@
     
     <!-- Footer styles for this template -->
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
-      
   </head>
 
   <body>
@@ -51,7 +50,7 @@
             </ul>
             
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#logout"><span class="glyphicon glyphicon-log-out"></span> Desconectar</a></li>
+                <li><a href="#logout" onclick="logOut()"><span class="glyphicon glyphicon-log-out"></span> Desconectar</a></li>
             </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -105,8 +104,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cookieManager.js"></script>
-    <script>if(!checkCookie("user") || checkCookie("password")){
-        window.location.href = "login.html";
-    }</script>
+    <script>
+        if(!checkCookie("user") || !checkCookie("pass")){
+            window.location.href = "login.html";
+        }
+    </script>
   </body>
 </html>

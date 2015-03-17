@@ -14,9 +14,10 @@ function setLoginCookie() {
             var exdays = 5;
             d.setTime(d.getTime() + (exdays*24*60*60*1000));
             var expires = "expires="+d.toUTCString();
-            console.error("User: " + uvalue + " - Pass: " + pvalue);
+    
             document.cookie = "user =" + uvalue + "; " + expires;
             document.cookie = "pass =" + pvalue + "; " + expires;
+            window.location.href = "index.html";
         }
 
 function getCookie(cname) {
@@ -31,7 +32,14 @@ function getCookie(cname) {
 }
 
 function checkCookie(cname) {
-    var user = getCookie("user");
-    if (user != "") {
+    if (getCookie(cname) != "") {
+        return true;
     }
+    return false;
+}
+
+function logOut(){
+    document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = 'pass=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    window.location.href = "login.html";
 }
