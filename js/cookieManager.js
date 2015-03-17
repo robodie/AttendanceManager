@@ -6,7 +6,6 @@ function setCookie(cname, cvalue, exdays) {
         }
 
 function setLoginCookie() {
-        console.log("error");
             var uvalue = document.forms["login"]["email"].value;
             var pvalue = document.forms["login"]["password"].value;
     

@@ -63,9 +63,9 @@
     <div class="jumbotron">
       <div class="container">
         <div class="list-group">
-            <a href="javascript:showModal()" class="list-group-item"><span class="badge">Hora: 13:00</span>M05-DAM B</a>
-            <a href="javascript:showModal()" class="list-group-item"><span class="badge">Hora: 15:00</span>M05-DAM A</a>
-            <a href="javascript:showModal()" name="C" class="list-group-item"><span class="badge">Hora: 12:00</span>M05-DAM A</a>
+            <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal"><span class="badge">Hora: 13:00</span>M05-DAM B</a>
+            <a href="#" class="list-group-item"><span class="badge">Hora: 15:00</span>M05-DAM A</a>
+            <a href="#" name="C" class="list-group-item"><span class="badge">Hora: 12:00</span>M05-DAM A</a>
           </div>
         
       </div>
@@ -78,7 +78,27 @@
         <p class="text-muted">INS Puig Castellar &copy; 2015</p>
       </div>
     </footer>
-    </div> <!-- /container -->
+    </div>
+    
+    
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Curso DAMN</h4>
+      </div>
+      <div class="modal-body">
+        Curso DAMN <---
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /container -->
   
     
 
