@@ -29,6 +29,9 @@
       
     <link href="css/cursos.css" rel="stylesheet">
       
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+      
+      
   </head>
 
   <body>
@@ -62,6 +65,14 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+        
+        <div class="input-group date">
+            <input type="text" class="form-control">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-th"></i>
+            </span>
+</div>
+          
         <div class="list-group">
             <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal"><span class="badge">Hora: 13:00</span>M05-DAM B</a>
             <a href="#" class="list-group-item"><span class="badge">Hora: 15:00</span>M05-DAM A</a>
@@ -90,7 +101,34 @@
         <h4 class="modal-title" id="myModalLabel">Curso DAMN</h4>
       </div>
       <div class="modal-body">
-        Curso DAMN <---
+          <table class="table">
+              <tr>
+                  <th>Nom</th>
+                  <th>Cognoms</th>
+                  <th>Asist.</th>
+              </tr>
+              <tr>
+                  <td>Oriol</td>
+                  <td>Albareda</td>
+                  <td><div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default btn-sm">Falta</button>
+                        <button type="button" class="btn btn-default btn-sm">Retard</button>
+                        <button type="button" class="btn btn-default btn-sm">Justificat</button>
+                        <button type="button" class="btn btn-default btn-sm">Expulsió</button>
+                      </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Alex</td>
+                  <td>Visiedo</td>
+                  <td><div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default btn-sm">Falta</button>
+                        <button type="button" class="btn btn-default btn-sm">Retard</button>
+                        <button type="button" class="btn btn-default btn-sm">Justificat</button>
+                        <button type="button" class="btn btn-default btn-sm">Expulsió</button>
+                      </div></td>
+              </tr>
+          </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -111,10 +149,29 @@
             
         }
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    
+    <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cookieManager.js"></script>
      
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/bootstrap-datepicker.ca.min.js"></script>
+        <script type="text/javascript">
+            $('.input-group.date').datepicker({
+                format: "dd/mm/yyyy",
+                weekStart: 1,
+                clearBtn: true,
+                language: "ca",
+                autoclose: true,
+                todayHighlight: true,
+                datesDisabled: ['03/06/2015', '03/21/2015']
+            });
+            
+            $('.table .btn').on('click', function () {
+                $(this).button('toggle');  
+            })
+        </script>
     
     
     
